@@ -1,73 +1,126 @@
-EXP NO:1 C PROGRAM FOR ARRAY OF STRUCTURE TO CHECK ELIGIBILITY FOR THE VACCINE.
+## EXP NO:1 C PROGRAM FOR ARRAY OF STRUCTURE TO CHECK ELIGIBILITY FOR THE PERSON TO VOTE.
 
-Aim:
-To write a C program for array of structure to check eligibility for the vaccine person age above 6 years of age.
+### Aim:
+To write a C program for array of structure to check eligibility for the person to vote.
 
-Algorithm:
+### Algorithm:
 1.	Declare structure eligible with age (integer) and n (character array)
 2.	Declare variable e of type eligible
 3.	Input age and name using scanf, store in e
-4.	If e.age <= 6
--	Print "Vaccine Eligibility: No"
+4.	If age>18
+-	Print "eligibility: YES"
 Else
--	Print "Vaccine Eligibility: Yes"
-5.	Print details (e.age, e.n)
+-	Print "Eligibility: NO"
+5.	Print details (z.age,z.name)
 6.	Return 0
  
-Program:
+### Program:
+```C
+#include <stdio.h>
+  #include<string.h>
+   struct vote
+   {
+       int age;
+       char name[20];
+       int no_of_present;
+       char eligibilty[5];
+   };
+   int main()
+   { 
+       struct vote z;
+   scanf("%d%s",&z.age,z.name);
+   if(z.age>18)
+   strcpy(z.eligibilty,"yes");
+   else
+   strcpy(z.eligibilty,"no");
+   printf("Age:%d\nName:%s\n",z.age,z.name);
+   printf("Age:%d\neligibility:%s",z.age,z.eligibilty);
+   return 0;
+   }
+```
+### Output:
+<img width="610" height="394" alt="image" src="https://github.com/user-attachments/assets/db24cdfa-1a0b-4db1-821c-f6845cda633b" />
 
-//type your code here
 
-
-Output:
-
-//paste your output here
-
-
-Result:
+### Result:
 Thus, the program is verified successfully. 
 
 
 
-EXP NO:2 C PROGRAM FOR PASSING STRUCTURES AS FUNCTION ARGUMENTS AND RETURNING A STRUCTURE FROM A FUNCTION
+## EXP NO:2 C PROGRAM FOR PASSING STRUCTURES TO A FUNCTION
 Aim:
-To write a C program for passing structure as function and returning a structure from a function
+To write a C program for passing Structure to a Function.
 
-Algorithm:
-1.	Define structure numbers with members a and b.
-2.	Declare variable n of type numbers.
-3.	Prompt the user to enter values for a and b.
-4.	Input values for a and b into n using scanf.
-5.	Call the add function with n as an argument.
-6.	Print the result returned by the add function.
-7.	Return 0
- 
-Program:
+### Algorithm:
+1.Declare a structure Complex with two float members:
+real,imag
 
-//type your code here
+2.Define a function addComplex(c1, c2) that:
+
+a. Creates a result variable of type Complex
+
+b. Adds the real parts:
+
+result.real = c1.real + c2.real
+
+c. Adds the imaginary parts:
+
+result.imag = c2.imag + c1.imag
+
+3.Call the function addComplex(num1, num2) and store the result in sum.
+
+4.Display the result in the format:
+
+"Sum = <real> + <imag>i"
+
+5.End
+### Program:
+```C
+#include <stdio.h>
+struct Complex 
+{
+    float real;
+    float imag;
+};
+struct Complex addComplex(struct Complex c1, struct Complex c2)
+{
+    struct Complex result;
+    result.real = c1.real + c2.real;
+    result.imag = c1.imag + c2.imag;
+    return result;
+}
+
+int main() 
+{
+    struct Complex num1, num2, sum;
+    scanf("%f", &num1.real);
+    scanf("%f", &num1.imag);
+    scanf("%f", &num2.real);
+    scanf("%f", &num2.imag);
+    sum = addComplex(num1, num2);
+    printf("Sum = %.1f + %.1fi\n", sum.real, sum.imag);
+
+    return 0;
+}
+```
 
 
+### Output:
+
+<img width="1256" height="397" alt="image" src="https://github.com/user-attachments/assets/84c584af-2f17-4e75-998e-ec97b54076d3" />
 
 
-Output:
-
-
-//paste your output here
-
-
-
-
-Result:
+### Result:
 Thus, the program is verified successfully
 
 
  
-EXP.NO:3 C PROGRAM TO READ A FILE NAME FROM USER AND WRITE THAT FILE USING FOPEN()
+## EXP.NO:3 C PROGRAM TO READ A FILE NAME FROM USER AND WRITE THAT FILE USING FOPEN()
 
-Aim:
+### Aim:
 To write a C program to read a file name from user
 
-Algorithm:
+### Algorithm:
 1.	Include the necessary header file stdio.h.
 2.	Begin the main function.
 3.	Declare a file pointer p.
