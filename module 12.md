@@ -215,7 +215,7 @@ void peek()
 
 ### Output:
 
-![Uploading image.png…]()
+<img width="1248" height="591" alt="image" src="https://github.com/user-attachments/assets/39ef4363-3409-4e8c-bd06-ce287ae7b97f" />
 
 
 
