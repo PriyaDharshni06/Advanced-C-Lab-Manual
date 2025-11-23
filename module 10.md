@@ -11,7 +11,7 @@ To write a C program to search a given element in the given linked list.
 ###  Program:
 
 ```C
-struct Node
+struct Node 
 {
     char data; 
     struct Node *next;
